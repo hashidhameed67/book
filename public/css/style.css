@@ -1,0 +1,198 @@
+:root {
+    --primary: #3b82f6;         /* blue-500 */
+    --primary-hover: #2563eb;   /* blue-600 */
+    --success: #22c55e;         /* green-500 */
+    --danger: #ef4444;          /* red-500 */
+    --secondary: #6b7280;       /* gray-500 */
+    --bg: #f9fafb;              /* very light gray background */
+    --card-bg: #ffffffcc;       /* translucent white (glass effect) */
+    --border: #e5e7eb;
+    --radius: 12px;
+    --shadow: 0 4px 24px rgba(0,0,0,0.08);
+    --text-color: #111827;
+    --gradient: linear-gradient(135deg, #eef2ff 0%, #e0f2fe 100%);
+}
+
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--gradient);
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+.wrapper {
+    max-width: 960px;
+        margin: 20px auto;
+    background: var(--card-bg);
+    padding: 40px 50px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+h2, h3 {
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: var(--primary-hover);
+}
+
+label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 6px;
+    color: #374151;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    font-size: 15px;
+    margin-bottom: 15px;
+    transition: all 0.25s ease;
+    background: #fff;
+}
+
+input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(37,99,235,0.15);
+    outline: none;
+}
+
+/* --- Books Section --- */
+.books-section {
+    margin-top: 20px;
+    background: #f8fafc;
+    padding: 15px 20px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    margin-bottom: 20px;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.03);
+}
+
+.book-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.book-row input[type="text"],
+.book-row input[type="number"] {
+    flex: 1;
+    height: 42px;
+    box-sizing: border-box;
+}
+
+.book-row button {
+    padding: 10px 14px;
+    border-radius: var(--radius);
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- Buttons --- */
+.btn {
+    border: none;
+    padding: 10px 18px;
+    border-radius: var(--radius);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--primary-hover);
+}
+
+.btn-success {
+    background: var(--success);
+    color: white;
+}
+
+.btn-success:hover {
+    background: #16a34a;
+}
+
+.btn-danger {
+    background: var(--danger);
+    color: white;
+}
+
+.btn-danger:hover {
+    background: #dc2626;
+}
+
+.btn-secondary {
+    background: var(--secondary);
+    color: white;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+hr {
+    margin: 40px 0;
+    border: 0;
+    height: 1px;
+    background: var(--border);
+}
+
+#authors-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#authors-table thead {
+    background: #f1f5f9;
+}
+
+#authors-table th, #authors-table td {
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+}
+
+#authors-table th {
+    font-weight: 600;
+    color: #374151;
+}
+
+#authors-table tbody tr:hover {
+    background-color: #f9fafb;
+}
+
+/* --- Responsive --- */
+@media (max-width: 700px) {
+    .wrapper {
+        padding: 25px;
+    }
+
+    .book-row {
+        flex-direction: column;
+    }
+}
