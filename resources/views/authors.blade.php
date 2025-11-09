@@ -47,7 +47,7 @@
 
     <h3>Authors List</h3>
 
-    <!-- Responsive table container -->
+
     <div class="table-responsive-custom">
       <table id="authors-table" class="display nowrap" width="100%">
         <thead>
@@ -70,3 +70,4 @@
   <script src="/js/authors.js"></script>
 </body>
 </html>
+
